@@ -27,31 +27,30 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       //appbar
-      bottomNavigationBar: NavigationBar(
-        onDestinationSelected: (int index){
-          if(index == 3){
-            Navigator.push(context, MaterialPageRoute(builder: (context){
-              return ResultScreen();
-            }));
-          }
-          /*setState(() {
-            selectedPage = index;
-          });*/
-        },
-
-        height: 80,
-        elevation: 0,
-        selectedIndex: 0,
-        destinations: [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.history), label: 'History'),
-          NavigationDestination(
-              icon: Icon(Icons.shopping_basket_outlined), label: 'Wardrobe'),
-          NavigationDestination(
-              icon: Icon(Icons.explore_outlined), label: 'Explore'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-        ],
+      bottomNavigationBar:
+      ClipRRect(
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(24),
+          topLeft: Radius.circular(24),
+        ),
+        child: BottomNavigationBar(
+          backgroundColor: Colors.deepOrange,
+          selectedFontSize: 11.0,
+          unselectedFontSize: 11.0,
+          unselectedItemColor: Colors.white70,
+          selectedItemColor: Colors.white,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.manage_search_outlined), label: 'Search'),
+            BottomNavigationBarItem(icon: Icon(Icons.history_outlined), label: 'History'),
+            BottomNavigationBarItem(icon: Icon(Icons.headphones_battery_outlined), label: 'Wardoreebe'),
+            BottomNavigationBarItem(icon: Icon(Icons.explore_outlined), label: 'Explore'),
+            BottomNavigationBarItem(icon: Icon(Icons.person_outline), label: 'Profile'),
+          ],
+        ),
       ),
+
+
       body: Container(
         width: double.infinity,
         height: double.infinity,
@@ -162,7 +161,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               width: 200,
                               height: 120,
-                              child: Image.asset(fashion.photo, fit: BoxFit.cover)),
+                              child: ClipRRect(
+                                  borderRadius: const BorderRadius.only(
+                                    topRight: Radius.circular(15),
+                                    topLeft: Radius.circular(15),
+                                  ),
+                                  child: Image.asset(fashion.photo, fit: BoxFit.cover))),
                           Container(
                             margin: EdgeInsets.all(10),
                             child: Row(
