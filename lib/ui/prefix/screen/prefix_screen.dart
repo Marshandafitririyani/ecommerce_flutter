@@ -15,7 +15,7 @@ class _PrefixScreenState extends State<PrefixScreen> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: Colors.deepOrange,
+        color: Colors.green,
         child: SafeArea(
           child: Stack(
             children: [
@@ -105,7 +105,6 @@ class _PrefixScreenState extends State<PrefixScreen> {
                         decoration: BoxDecoration(
                             color: Color(0xFFF89A7D),
                             gradient: RadialGradient(
-
                               stops: [
                                 0.1,
                                 0.4,
@@ -113,10 +112,14 @@ class _PrefixScreenState extends State<PrefixScreen> {
                                 0.9,
                               ],
                               colors: [
+                                Color(0xFFD3FAD4),
+                                Color(0xFFD3FAD4),
+                                Color(0xFFD3FAD4),
+                                Color(0xFFD3FAD4),
+                                /*Color(0xFFF89A7D),
                                 Color(0xFFF89A7D),
                                 Color(0xFFF89A7D),
-                                Color(0xFFF89A7D),
-                                Color(0xFFF89A7D),
+                                Color(0xFFF89A7D),*/
                               ],
                             ),
                             borderRadius: BorderRadius.only(
@@ -129,13 +132,15 @@ class _PrefixScreenState extends State<PrefixScreen> {
                         children: [
                           Text(
                             'Let\'s shopping with our in the Shopp Online',
-                            style: TextStyle(fontSize: 35, color: Colors.white, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontSize: 35,
+                                color: Colors.green,
+                                fontWeight: FontWeight.bold),
                           ),
                           Text(
                             'Finding your desired item in our online shop is certainly satisfying',
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 20, color: Colors.green),
                           ),
-
                           Container(
                             margin: EdgeInsets.only(top: 20),
                             child: Row(
@@ -147,16 +152,18 @@ class _PrefixScreenState extends State<PrefixScreen> {
                                         width: 50,
                                         height: 10,
                                         decoration: BoxDecoration(
-                                            color: Colors.deepOrange,
+                                            color: Colors.green,
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(90),
                                                 topRight: Radius.circular(90),
-                                                bottomRight: Radius.circular(90),
-                                                bottomLeft: Radius.circular(90))),
+                                                bottomRight:
+                                                    Radius.circular(90),
+                                                bottomLeft:
+                                                    Radius.circular(90))),
                                         child: Column()),
-
                                     Container(
-                                      margin: EdgeInsets.symmetric(horizontal: 3),
+                                        margin:
+                                            EdgeInsets.symmetric(horizontal: 3),
                                         width: 10,
                                         height: 10,
                                         decoration: BoxDecoration(
@@ -164,10 +171,11 @@ class _PrefixScreenState extends State<PrefixScreen> {
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(90),
                                                 topRight: Radius.circular(90),
-                                                bottomRight: Radius.circular(90),
-                                                bottomLeft: Radius.circular(90))),
+                                                bottomRight:
+                                                    Radius.circular(90),
+                                                bottomLeft:
+                                                    Radius.circular(90))),
                                         child: Column()),
-
                                     Container(
                                         width: 10,
                                         height: 10,
@@ -176,26 +184,31 @@ class _PrefixScreenState extends State<PrefixScreen> {
                                             borderRadius: BorderRadius.only(
                                                 topLeft: Radius.circular(90),
                                                 topRight: Radius.circular(90),
-                                                bottomRight: Radius.circular(90),
-                                                bottomLeft: Radius.circular(90))),
+                                                bottomRight:
+                                                    Radius.circular(90),
+                                                bottomLeft:
+                                                    Radius.circular(90))),
                                         child: Column())
                                   ],
-                                )
-                                ,
-
-
+                                ),
                                 Container(
-                                  padding: EdgeInsets.only(left: 13, right: 8, top: 8, bottom: 8 ),
+                                  padding: EdgeInsets.only(
+                                      left: 13, right: 8, top: 8, bottom: 8),
                                   decoration: BoxDecoration(
-                                    color: Colors.deepOrange,
-                                    borderRadius: BorderRadius.all(Radius.circular(80))
-                                  ),
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(80))),
                                   child: Row(
                                     children: [
-                                      Text('Next', style: TextStyle(color: Colors.white),),
+                                      Text(
+                                        'Next',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                       GestureDetector(
-                                        onTap: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context){
+                                        onTap: () {
+                                          Navigator.push(context,
+                                              MaterialPageRoute(
+                                                  builder: (context) {
                                             return HomeScreen();
                                           }));
                                         },
@@ -204,10 +217,13 @@ class _PrefixScreenState extends State<PrefixScreen> {
                                             padding: EdgeInsets.all(6),
                                             decoration: BoxDecoration(
                                               color: Colors.white,
-                                              borderRadius: BorderRadius.circular(50),
-
+                                              borderRadius:
+                                                  BorderRadius.circular(50),
                                             ),
-                                            child: Icon(Icons.arrow_forward_ios_outlined, color: Colors.deepOrange,)),
+                                            child: Icon(
+                                              Icons.arrow_forward_ios_outlined,
+                                              color: Colors.green,
+                                            )),
                                       )
                                     ],
                                   ),

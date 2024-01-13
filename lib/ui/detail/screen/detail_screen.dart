@@ -2,6 +2,7 @@ import 'package:ecommerce_flutter/model/fashion.dart';
 import 'package:flutter/material.dart';
 
 
+
 class DetailScreen extends StatefulWidget {
   const DetailScreen({super.key, required this.fashion});
 
@@ -18,7 +19,7 @@ class _DetailScreenState extends State<DetailScreen> {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: Colors.deepOrange,
+        color: Colors.green,
         child: SafeArea(
           child: Stack(
             children: [
@@ -49,22 +50,25 @@ class _DetailScreenState extends State<DetailScreen> {
 
 inputDetail (String image, String name){
   return Container(
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-            child: Image.asset(image, fit: BoxFit.contain)
+    child: InteractiveViewer(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            child: Image.asset(image, fit: BoxFit.contain,),
+              // child: PinchZoom(maxScale: 3.0, child: Image.asset(image, fit: BoxFit.contain))
 
-    ),
 
-      ],
+      ),
+
+        ],
+      ),
     ),
   );
 }
 
-PinchZoom({required double maxScale, required Image child}) {
-}
+
 /*
 width: double.infinity,
 height: double.infinity,
