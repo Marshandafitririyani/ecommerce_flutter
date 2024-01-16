@@ -16,32 +16,44 @@ class _DetailScreenState extends State<DetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.white),
+        // leading: Icon(Icons.arrow_back_ios),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Icon(Icons.flashlight_on_outlined, color: Colors.white,),
+          )        ],
+
+
+
+      ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
         color: Colors.green,
-        child: SafeArea(
-          child: Stack(
-            children: [
-              Container(
-                margin: EdgeInsets.all(16),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    GestureDetector(
-                        onTap: (){
-                          Navigator.pop(context);
-                        },
-                        child: Icon(Icons.arrow_back_ios, color: Colors.white,)
-                    ),
-                    Icon(Icons.flashlight_on_outlined, color: Colors.white,)
-                  ],
-                ),
-              ),
 
-              inputDetail(widget.fashion.photo, widget.fashion.name),
-            ],
-          ),
+        child: Stack(
+          children: [
+           /* Container(
+              margin: EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.arrow_back_ios, color: Colors.white,)
+                  ),
+                  Icon(Icons.flashlight_on_outlined, color: Colors.white,)
+                ],
+              ),
+            ),*/
+
+            inputDetail(widget.fashion.photo, ''),
+          ],
         ),
       ),
     );
