@@ -1,5 +1,4 @@
 import 'package:ecommerce_flutter/model/fashion.dart';
-import 'package:ecommerce_flutter/ui/detail/screen/detail_screen.dart';
 import 'package:ecommerce_flutter/ui/result/screen/result_screen.dart';
 import 'package:ecommerce_flutter/ui/search/screen/search_screen.dart';
 import 'package:flutter/material.dart';
